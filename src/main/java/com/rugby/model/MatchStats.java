@@ -6,29 +6,32 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
-@XmlRootElement(name="matchStats")
-@XmlAccessorType(XmlAccessType.FIELD)
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+
 public class MatchStats {
 
-  @XmlElement(name = "statsId")
+  @JsonProperty("statsId")
   private int statsId;
 
-  @XmlElement(name = "playerId")
+  @JsonProperty("playerId")
   private int playerId;
   
-  @XmlElement(name = "matchHalves")
+  @JsonProperty("matchHalves")
   private String matchHalves;
   
-  @XmlElement(name = "statsType")
+  @JsonProperty("statsType")
   private String stats_type;
 
-  @XmlElement(name = "statsCount")
+  @JsonProperty("statsCount")
   private int statsCount;
 
-  @XmlElement(name = "totalMatchSeconds")
+  @JsonProperty("totalMatchSeconds")
   private long totalMatchSeconds;
-
-  @XmlTransient
+   @JsonIgnore
   private Player player;
   
 public MatchStats() {

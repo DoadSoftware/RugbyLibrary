@@ -5,35 +5,37 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement(name="event")
-@XmlAccessorType(XmlAccessType.FIELD)
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Event implements Comparable<Event> {
 
-  @XmlElement(name = "eventNumber")
+  @JsonProperty("eventNumber")
   private int eventNumber;
 
-  @XmlElement(name = "eventPlayerId")
+  @JsonProperty("eventPlayerId")
   private int eventPlayerId;
   
-  @XmlElement(name = "eventMatchHalves")
+  @JsonProperty("eventMatchHalves")
   private String eventMatchHalves;
   
-  @XmlElement(name = "statsId")
+  @JsonProperty("statsId")
   private int statsId;
 
-  @XmlElement(name = "eventLog")
+  @JsonProperty("eventLog")
   private String eventLog;
   
-  @XmlElement(name = "eventType")
+  @JsonProperty("eventType")
   private String eventType;
   
-  @XmlElement(name = "offPlayerId")
+  @JsonProperty("offPlayerId")
   private int offPlayerId;
   
-  @XmlElement(name = "onPlayerId")
+  @JsonProperty("onPlayerId")
   private int onPlayerId;
 
-  @XmlElement(name = "eventScore")
+  @JsonProperty("eventScore")
   private float eventScore;
   
 public Event() {

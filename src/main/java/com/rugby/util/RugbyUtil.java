@@ -13,6 +13,7 @@ public class RugbyUtil {
 	public final static String CONFIGURATIONS_DIRECTORY = "Configurations/";
 	public final static String OUTPUT_XML = "OUTPUT.XML";
 	public final static String CLOCK_XML = "CLOCK.XML";
+	public final static String CLOCK_JSON = "CLOCK.JSON";
 	public final static String API_XML = "API.XML";
 	public final static String XML_EXTENSION = ".xml";
 	
@@ -140,4 +141,10 @@ public class RugbyUtil {
 	public final static String SESSION = "SESSION";
 
 	public final static String PLURAL = "PLURAL";
+
+	public static final String CONVERSION = "CONVERSION";
+
+	public static final String DROP_GOAL = "DROP_GOAL";
+
+	public static final String TRY = "TRY";
 }
